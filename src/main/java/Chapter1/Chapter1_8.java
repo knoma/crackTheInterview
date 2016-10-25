@@ -1,5 +1,7 @@
 package Chapter1;
 
+import static Libary.Helper.printMatrix2;
+
 /**
  * Created by knoma on 10/5/16.
  */
@@ -11,32 +13,10 @@ public class Chapter1_8 {
         setZero(matrix);
 
 
-        printMatrix(matrix);
+        printMatrix2(matrix);
     }
 
-    private static void printMatrix(int[][] matrix) {
-        try {
-            int row = matrix.length;
-            int column = matrix[0].length;
 
-
-            StringBuilder sb = new StringBuilder();
-            sb.append("|\t");
-
-            for (int i = 0; i < row; i++) {
-                for (int j = 0; j < column; j++) {
-                    sb.append(matrix[i][j]+"\t");
-                }
-                sb.append("|");
-                System.out.println(sb.toString());
-                sb = new StringBuilder();
-                sb.append("|\t");
-            }
-
-        } catch (Exception e) {
-            System.out.println("Matrix is empty");
-        }
-    }
 
     private static void setZero(int[][] matrix) {
         boolean[] row = new boolean[matrix.length];
